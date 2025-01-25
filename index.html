@@ -1,0 +1,100 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureVault - Password Manager</title>
+    <link rel="stylesheet" href="pass-org.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <a href="#" class="logo">
+        <i class="fas fa-lock"></i> SecureVault
+      </a>
+      <nav class="navbar">
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch" class="theme-switch-input">
+            <label for="theme-switch" class="theme-switch-label">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+        <button class="btn" id="signup-btn">Sign Up</button>
+        <i class="fa-regular fa-circle-question" id="icon"></i>
+      </nav>
+    </header>
+    <section class="filldetails">
+    <section  class="section">
+      <div class="tag">
+      <h2><i class="fas fa-magic"></i> Secure your passwords, secure your logins!</h2>
+      </div>
+      <div class="wrapper">
+        <div class="loginbox">
+            <h2>If already a user, Login!</h2>
+            <form id="loginform">
+
+              <div class="input-box">
+                <label for="email-input"><i class="fa-solid fa-at"></i>Email</label>
+                <input type="email" name="email" id="email-input" placeholder="Enter registered Email"></input>
+              </div>
+
+              <div class="input-box">
+                <label for="password-input"><i class="fa-solid fa-lock"></i>Password</label>
+                <input type="password" name="password" id="password-input" placeholder="Enter created Password"></input>
+              </div>
+  
+              <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+              </div>
+  
+              <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="signupsection" id="signup-section" style="display:none">
+      <div class="signupwrapper">
+        <div class="signupbox">
+            <h2>Signup to start!</h2>
+            <form id="signupform">
+
+              <div class="signup-input">
+                <label for="email-input"><i class="fa-solid fa-user"></i>Username</label>
+                <input type="text" name="email" id="signup-username" placeholder="Enter Username"></input>
+              </div>
+
+              <div class="signup-input">
+                <label for="email-input"><i class="fa-solid fa-at"></i>Email</label>
+                <input type="email" name="email" id="signup-email" placeholder="Enter Email ID"></input>
+              </div>
+
+              <div class="signup-input">
+                <label for="password-input"><i class="fa-solid fa-lock"></i>Password</label>
+                <input type="password" name="password" id="signup-password" placeholder="Create a New Password"></input>
+              </div>
+
+              <div class="signup-input">
+                <label for="password-input"><i class="fa-solid fa-lock"></i>Confirm Password</label>
+                <input type="password" name="password" id="signup-confirm-password" placeholder="Confirm New Password"></input>
+              </div>
+  
+  
+              <button type="submit" class="btn" id="submitBtn">Signup</button>
+            </form>
+        </div>
+      </div>
+    </section>
+    </section>
+
+    <section class="features">
+      <div class="featurepanel" id="featurepanel">
+          <p><b>SecureVault</b> is a comprehensive password management solution designed to make online security simple and efficient. It features a user-friendly website that includes a <b>password management table</b>, allowing users to store and organize all their passwords in one secure location. Users can <b>manually add passwords</b> using a form that seamlessly integrates with the table.<br>SecureVault also offers a <b>powerful password generator</b>, enabling users to create strong and customizable passwords by specifying length and character types. Additionally, the platform provides a <b>secure notes</b> feature, allowing users to safely store personal notes, PINs, and other sensitive information. For enhanced convenience, SecureVault supports <b>auto-fill functionality</b>, automatically entering stored passwords into login pages to save time and reduce hassle.</p>
+          <p> With its robust tools, <b>SecureVault</b> ensures your digital life stays secure and accessible.</p>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>

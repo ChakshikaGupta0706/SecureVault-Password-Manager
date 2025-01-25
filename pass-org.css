@@ -1,0 +1,512 @@
+
+/*CSS for the pass-org.html page including the main page of the website*/
+:root {
+    --bg-primary: #f4f4f4;
+    --bg-secondary: #ffffff;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --accent-color: #3498db;
+    --accent-hover: #2980b9;
+    --border-color: #ddd;
+}
+
+[data-theme='dark'] {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --accent-color: #4CAF50;
+    --accent-hover: #45a049;
+    --border-color: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle {
+    margin-right: 20px;
+}
+
+.theme-switch-input {
+    display: none;
+}
+
+.theme-switch-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch-label i {
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.theme-switch-label .fa-sun {
+    color: #f39c12;
+}
+
+.theme-switch-label .fa-moon {
+    color: #2c3e50;
+}
+
+.navbar .btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar .btn::after {
+    background-color: var(--accent-hover);
+}
+
+.navbar a{
+    padding-right: 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.navbar a i {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+.navbar a i:hover {
+    color: var(--accent-hover);
+}
+
+.navbar .fa-circle-question {
+    color: var(--accent-color);
+    font-size: 30px;
+}
+.navbar .fa-circle-question:hover {
+    color: var(--accent-hover);
+}
+.pass-section {
+    display: flex;
+    padding: 100px 40px 40px;
+    gap: 40px;
+}
+
+.wrapper-left {
+    flex: 1;
+}
+
+.table-container {
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.no-passwords {
+    text-align: center;
+    padding: 50px;
+    color: var(--text-secondary);
+}
+
+.no-passwords i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.rightsection {
+    flex: 1;
+}
+
+.form-container, .passwd-suggest, .notes {
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.form-group label i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.form-container button, .notes button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: var(--accent-hover);
+}
+
+.generator-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.length-control, .complexity-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.complexity-controls label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#generated-password-display {
+    background-color: var(--bg-primary);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.inputwrapper {
+    display:flex;
+    max-height: 120vh;
+}
+.inputwrapper input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.toggle-encryption {
+    margin-top: 20px;
+    padding-left: 5px
+}
+
+.notes .viewnote {
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+    }
+}
+.featurepanel {
+    position: fixed;
+    top: calc(8% + 20px);
+    border-radius: 10px;
+    width: 400px;
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: white;
+    font-weight: 500;
+    padding: 20px;
+    transition: right 0.3s ease;
+    right:-400px;
+    overflow: hidden;
+}
+
+.featurepanel.show {
+    right: 25px;
+}
+
+.profilepanel {
+    position: fixed;
+    top: calc(8% + 20px);
+    border-radius: 10px;
+    width: 300px;
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: white;
+    font-weight: 500;
+    padding: 15px;
+    transition: right 0.3s ease;
+    right:-300px;
+    overflow: hidden;
+}
+
+.profilepanel.show {
+    right: 25px;
+}
+
+.profilepanel h4 {
+    font-size: 20px;
+    padding-bottom: 30px;
+    color: var(--text-primary);
+}
+.profilepanel .links div {
+    padding: 10px;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+.profilepanel a {
+    font-size: 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.profilepanel i {
+    padding-right: 12px;
+}
+.profilepanel .logoutbtn {
+    background-color: var(--text-primary);
+    color: var(--bg-secondary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+
+/*CSS for index.html file which has the login and the signup page*/
+.section {
+    overflow:hidden;
+}
+
+.tag {
+    color: var(--text-primary);
+    padding: 40px;
+}
+.wrapper{
+    padding-left:35px;
+    width: 500px;
+}
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.input-box label i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.loginbox {
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.loginbox form .btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.loginbox form .btn::after {
+    background-color: var(--accent-hover);
+}
+
+.remember-forgot {
+    margin-bottom: 20px;
+}
+.remember-forgot .checkbox {
+    background-color: var(--accent-color);
+}
+
+/*CSS for styling the signup section*/
+.filldetails {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 90px 35px 35px;
+}
+
+.signupwrapper {
+    border-radius: 10px;
+    width: 700px;
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: white;
+    font-weight: 500;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.signupbox {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.signupbox h2 {
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .filldetails {
+        flex-direction: column;
+    }
+}
+.signup-input {
+    margin-bottom: 20px;
+}
+
+.signup-input label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.signup-input label i {
+    margin-right: 10px;
+    color: var(--text-primary);
+}
+
+.signup-input input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.signupbox form .btn {
+    background-color: var(--text-primary);
+    color: var(--bg-secondary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+
