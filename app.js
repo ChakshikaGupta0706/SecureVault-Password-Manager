@@ -230,4 +230,13 @@ document.addEventListener('DOMContentLoaded', () => {
         
         alert('Note added successfully!');
     });
+
+    const logoutButton = document.getElementById('logoutbtn');
+
+    logoutButton.addEventListener('click', () => {
+        localStorage.removeItem('username');
+        localStorage.removeItem('savedPasswords');
+        localStorage.removeItem('secureNotes');
+        window.location.href = 'index.html';
+    });
 });
